@@ -1,0 +1,102 @@
+
+/*DESKTOP*/
+
+@media only screen and (min-width: 1200px) {
+
+    main{
+
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Inter', sans-serif;
+        min-height: 98vh;
+        margin: 0;
+        padding:0;
+    }
+
+
+
+    .selectionSection{
+
+        background-color: #61BCAC;
+        width:50%;
+        padding: 0;
+        margin: 0;
+        height: 99vh;
+    }
+
+    .errors{
+        margin-bottom: 2em;
+        text-align: center;
+        color: #c80000;
+    }
+
+
+    .selectionSection h1{
+        color: white;
+        font-weight: 500;
+        font-size: 4em;
+        text-align: center;
+        margin-top: 5em;
+    }
+
+    .selectionSection p{
+        color: white;
+        margin-left: 10em;
+        line-height: 0.5;
+    }
+
+    .selectionSection p:first-of-type{
+        margin-top: 35%;
+    }
+
+    .selectionSection p a{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        transition: 1s;
+    }
+
+    .selectionSection p a:hover{
+        font-size: 1.1em;
+        transition: 2s;
+    }
+
+    main section form div:first-of-type{
+        font-size: 2em;
+        margin-left: 5em;
+        display: inline;
+        color: white;
+    }
+
+    main section form div{
+        margin-right: 1em;
+        font-size: 2em;
+        display: inline;
+        color: white;
+    }
+
+    main section form div input[type="radio"]{
+        transform: scale(1.5);
+        cursor: pointer;
+    }
+
+    main section form input[type="submit"]{
+        display: block;
+        margin: 5em auto 0;
+        padding: 0.9em 3em;
+        background-color: #ffffff;
+        color: rgb(71, 64, 64);
+        font-size: 1.2em;
+        border: #61BCAC 3px solid;
+        border-radius:10px;
+        cursor: pointer;
+        font-weight: 500;
+    }
+    main section form input[type="submit"]:hover{
+        border: rgb(255, 255, 255) 5px solid;
+        background-color: #61BCAC;
+        margin: 5em auto 0;
+        padding: 0.9em 3em;
+        border-radius:10px;
+        color: white;
+    }
+}
