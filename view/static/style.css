@@ -14,7 +14,6 @@
     }
 
 
-
     .selectionSection{
 
         background-color: #61BCAC;
@@ -99,4 +98,26 @@
         border-radius:10px;
         color: white;
     }
+
+
+    /*STOCK SECTION*/
+    .stockData{
+        margin-top: 10em;
+    }
+    .stockData h2{
+        text-align: center;
+        
+    }
+
+    .stockData h4{
+        text-align: center;
+        
+    }
+
+    .todayStock{
+        margin: 2em auto;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
 }
