@@ -26,14 +26,14 @@ def index():
                 # Predict values based on today's data
 
                 predicted_Stock_Data = predict_stock_values(selected_radio, today_Stock_Data, model[0])
-
+           
                 stockData = {
                     "Company": selected_radio,
                     "Date": date.today(),
                     "Open": today_Stock_Data['1. open'],
                     "High":  today_Stock_Data['2. high'],  
                     "Low":today_Stock_Data['3. low'],
-                    "Volume":today_Stock_Data['4. close'],
+                    "Volume":today_Stock_Data['6. volume'],
                     "Prediction for tommorow":"Test"
                 }
                 
