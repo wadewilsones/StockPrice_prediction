@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from analyzer.data_processing.data_training import process_data, getStockToday, predict_stock_values
+from analyzer.data_processing.data_training import process_data, getStockToday, predict_stock_values, create_graph
 from datetime import date
 
 
@@ -12,6 +12,8 @@ def index():
     #Validate input
     errorMessage = None
     stockData = None
+    predicted_prices = None
+    graph = None
     try:
         errorMessage = None # update error value to null
         if request.method == 'POST':
@@ -25,7 +27,7 @@ def index():
 
                 # Predict values based on today's data
 
-                predicted_Stock_Data = predict_stock_values(selected_radio, today_Stock_Data, model[0])
+                predicted_prices = predict_stock_values(selected_radio, today_Stock_Data, model[0])
            
                 stockData = {
                     "Company": selected_radio,
@@ -34,12 +36,12 @@ def index():
                     "High":  today_Stock_Data['2. high'],  
                     "Low":today_Stock_Data['3. low'],
                     "Volume":today_Stock_Data['6. volume'],
-                    "Prediction for tommorow":"Test"
                 }
-                
+
+                graph = create_graph(predicted_prices)
              
     except Exception as err:
         #Display error
         errorMessage = err#"Select one of the options!"
         print(errorMessage)
-    return render_template('index.html', errorMessage = errorMessage, stockData = stockData)
+    return render_template('index.html', errorMessage = errorMessage, stockData = stockData, predicted_prices = predicted_prices, graph = graph)

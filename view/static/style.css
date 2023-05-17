@@ -125,4 +125,17 @@
         justify-content: space-evenly;
     }
 
+    .todayStock p{
+        margin: 0 1em 0 0;
+    }
+
+    .graphData{
+        text-align: center;
+    }
+
+    .graphImages{
+        width:600px;
+        height: 600px;
+    }
+
 }
