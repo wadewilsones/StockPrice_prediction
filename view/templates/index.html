@@ -11,10 +11,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
+    <main class="{% if stockData %}containerFull{% else %}containerEmpty{% endif %}">
         <section class="selectionSection">
             <h1>Stock Analyzer</h1>
-
+            <h2>Select one of the presented stocks below</h2>
             {% if errorMessage %}
                 <div class="errors">{{errorMessage}}</div>
             {% endif %}
@@ -45,26 +45,25 @@
             <p>GitHub: <a href="https://github.com/wadewilsones">https://github.com/wadewilsones</a></p>
 
         </section>
-
         <section>
-            {% if stockData %}
+        {% if stockData %}
                 <div class="stockData">
                     <h2>{{stockData.Company.upper()}}</h2>
                     <h4>Today: {{stockData.Date}}</h4>
                     <div class="todayStock">
                         <p><b>Open:</b> {{stockData.Open}}</p>
                         <p><b>High:</b> {{stockData.High}}</p>
-                        <p><b>Low:</b>{{stockData.Low}}</p>
+                        <p><b>Low:</b> {{stockData.Low}}</p>
                     </div>
                     <div class="graphData">
                         <h3>Predicted Price:</h3>
                         <img src="../static/graph.png" alt="Stock Prices Graph" class="graphImages">
                     </div>
                 </div>
-            {% endif %}
-
+            
+        {% endif %}
         </section>
-        <p></p>
+
     </main>
 </body>
 </html>

@@ -8,26 +8,6 @@
 
 @media only screen and (min-width: 1200px) {
 
-    main{
-
-        display: flex;
-        justify-content: space-between;
-        font-family: 'Inter', sans-serif;
-        min-height: 98vh;
-        margin: 0;
-        padding:0;
-    }
-
-
-    .selectionSection{
-
-        background-color: #61BCAC;
-        width:50%;
-        padding: 0;
-        margin: 0;
-        height: 99vh;
-    }
-
     .errors{
         margin-bottom: 2em;
         text-align: center;
@@ -35,74 +15,188 @@
     }
 
 
-    .selectionSection h1{
+    /*If stock was not selected*/
+    .containerEmpty{
+
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        padding:0;
+        color: white;
+    }
+
+    .containerEmpty section{
+        width:100%;
+    }
+
+    .containerEmpty section:first-of-type{
+
+        background-color: #373737;
+        padding: 0;
+        margin: 0;
+        min-height: 100vh;
+    }
+
+    .containerEmpty section:first-of-type h1{
         color: white;
         font-weight: 500;
         font-size: 4em;
+        padding-top: 3em;
         text-align: center;
-        margin-top: 5em;
+        margin-bottom: 0.2em;
     }
 
-    .selectionSection p{
+    .containerEmpty section:first-of-type h2{
+        font-weight: 300;
+        text-align: center;
+        
+    }
+
+    .containerEmpty form {
+
+        margin: 6em auto 0;
+        display: block;
+        width:60%;
+    }
+    .containerEmpty form div{
+
+        font-size: 2em;
+        display: inline;
+        margin: 0 1em;
         color: white;
-        margin-left: 10em;
-        line-height: 0.5;
+
+    }
+    .containerEmpty form div:first-of-type{
+        margin-left: 6em;
     }
 
-    .selectionSection p:first-of-type{
-        margin-top: 35%;
+    .containerEmpty section:first-of-type p{
+        color: white;
+        text-align: center;
+        line-height: 2;
     }
 
-    .selectionSection p a{
+    .containerEmpty section:first-of-type p:first-of-type{
+        margin-top: 15%;
+    }
+
+    .containerEmpty section:first-of-type p a{
         color: rgb(255, 255, 255);
         text-decoration: none;
         transition: 1s;
     }
 
-    .selectionSection p a:hover{
+    .containerEmpty section:first-of-type p a:hover{
         font-size: 1.1em;
         transition: 2s;
     }
 
-    main section form div:first-of-type{
+
+
+    /*If stock was selected*/
+    .containerFull{
+
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Inter', sans-serif;
+        min-height: 98vh;
+        margin: 0;
+        padding:0;
+  
+    }
+
+    .containerFull section{
+        width:50%;
+    }
+
+
+    .containerFull section:first-of-type{
+
+        background-color: #404040;
+        padding: 0;
+        margin: 0;
+    }
+
+
+
+    .containerFull section:first-of-type h1{
+        color: white;
+        font-weight: 500;
+        font-size: 4em;
+        padding-top: 3em;
+        text-align: center;
+        margin-bottom: 0.2em;
+    }
+
+    .containerFull section:first-of-type h2{
+        font-weight: 300;
+        color: white;
+        text-align: center;
+        margin-bottom: 3em;
+    }
+
+    .containerFull form div:first-of-type{
         font-size: 2em;
         margin-left: 5em;
         display: inline;
         color: white;
     }
 
-    main section form div{
+    .containerFull form div{
         margin-right: 1em;
         font-size: 2em;
         display: inline;
         color: white;
     }
 
-    main section form div input[type="radio"]{
+     form div input[type="radio"]{
         transform: scale(1.5);
+        margin: 0 0.5em;
         cursor: pointer;
     }
 
-    main section form input[type="submit"]{
+    form input[type="submit"]{
         display: block;
         margin: 5em auto 0;
         padding: 0.9em 3em;
         background-color: #ffffff;
         color: rgb(71, 64, 64);
         font-size: 1.2em;
-        border: #61BCAC 3px solid;
+        border: #2d302f 3px solid;
         border-radius:10px;
         cursor: pointer;
         font-weight: 500;
     }
-    main section form input[type="submit"]:hover{
+     form input[type="submit"]:hover{
         border: rgb(255, 255, 255) 5px solid;
-        background-color: #61BCAC;
+        background-color: #2d302f;
         margin: 5em auto 0;
         padding: 0.9em 3em;
         border-radius:10px;
         color: white;
     }
+
+    .containerFull section:first-of-type p{
+        color: white;
+        line-height: 2;
+        text-align: center;
+    }
+
+    .containerFull section:first-of-type p:first-of-type{
+        margin-top: 35%;
+    }
+
+    .containerFull section:first-of-type p a{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        transition: 1s;
+    }
+
+    .containerFull section:first-of-type p a:hover{
+        font-size: 1.1em;
+        transition: 2s;
+    }
+
+    /*INITIAL STOCK SECTION*/
 
 
     /*STOCK SECTION*/
@@ -135,7 +229,7 @@
 
     .graphImages{
         width:600px;
-        height: 600px;
+        height: 650px;
     }
 
 }
