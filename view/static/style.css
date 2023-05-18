@@ -9,6 +9,7 @@
 @media only screen and (min-width: 1200px) {
 
     .errors{
+        margin-top: 1em;
         margin-bottom: 2em;
         text-align: center;
         color: #c80000;
@@ -30,7 +31,9 @@
 
     .containerEmpty section:first-of-type{
 
-        background-color: #373737;
+       background-image: url('./background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
         padding: 0;
         margin: 0;
         min-height: 100vh;
@@ -111,7 +114,9 @@
 
     .containerFull section:first-of-type{
 
-        background-color: #404040;
+        background-image: url('./background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
         padding: 0;
         margin: 0;
     }
@@ -161,14 +166,13 @@
         background-color: #ffffff;
         color: rgb(71, 64, 64);
         font-size: 1.2em;
-        border: #2d302f 3px solid;
         border-radius:10px;
         cursor: pointer;
         font-weight: 500;
     }
      form input[type="submit"]:hover{
-        border: rgb(255, 255, 255) 5px solid;
-        background-color: #2d302f;
+
+        background-color: #6f028a;
         margin: 5em auto 0;
         padding: 0.9em 3em;
         border-radius:10px;
