@@ -42,6 +42,6 @@ def index():
              
     except Exception as err:
         #Display error
-        errorMessage = err#"Select one of the options!"
+        errorMessage = "Something went wrong!"
         print(errorMessage)
-    return render_template('index.html', errorMessage = "Something went wrong!", stockData = stockData, predicted_prices = predicted_prices, graph = graph)
+    return render_template('index.html', errorMessage = errorMessage, stockData = stockData, predicted_prices = predicted_prices, graph = graph)

@@ -19,25 +19,27 @@
                 <div class="errors">{{errorMessage}}</div>
             {% endif %}
             <form method="POST">
-                <div>
-                    <input type="radio" name="stock"  id="google" value="Google">
-                    <label for="google">Google</label>
-                </div>
-             
-                <div>
-                    <input type="radio" name="stock"  id="apple" value="Apple">
-                    <label for="google">Apple</label>
-                </div>
-    
-                <div>
-                    <input type="radio" name="stock"  id="amazon" value="Amazon">
-                    <label for="google">Amazon</label>
-                </div>
-    
-                <div>
-                    <input type="radio" name="stock"  id="meta" value="Meta">
-                    <label for="meta">Meta</label>
-                </div>
+                <ul>
+                    <li>
+                        <input type="radio" name="stock"  id="google" value="Google">
+                        <label for="google">Google</label>
+                    </li>
+                
+                    <li>
+                        <input type="radio" name="stock"  id="apple" value="Apple">
+                        <label for="google">Apple</label>
+                    </li>
+        
+                    <li>
+                        <input type="radio" name="stock"  id="amazon" value="Amazon">
+                        <label for="google">Amazon</label>
+                    </li>
+        
+                    <li>
+                        <input type="radio" name="stock"  id="meta" value="Meta">
+                        <label for="meta">Meta</label>
+                    </li>
+                </ul>
                 <input type="submit" value="Predict Price"></input>
             </form>
 

@@ -55,21 +55,29 @@
     }
 
     .containerEmpty form {
-
         margin: 6em auto 0;
         display: block;
-        width:60%;
+        width: 70%;
+        align-content: center;
     }
-    .containerEmpty form div{
+
+    .containerEmpty form ul{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .containerEmpty form ul li{
 
         font-size: 2em;
-        display: inline;
+        display: inline-block;
         margin: 0 1em;
         color: white;
 
     }
-    .containerEmpty form div:first-of-type{
-        margin-left: 6em;
+    .containerEmpty form ul li:first-of-type{
+        margin-left: 0;
     }
 
     .containerEmpty section:first-of-type p{
@@ -92,8 +100,6 @@
         font-size: 1.1em;
         transition: 2s;
     }
-
-
 
     /*If stock was selected*/
     .containerFull{
@@ -139,21 +145,22 @@
         margin-bottom: 3em;
     }
 
-    .containerFull form div:first-of-type{
+    
+    .containerFull form ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .containerFull form ul li{
+        margin-right: 0.5em;
         font-size: 2em;
-        margin-left: 5em;
         display: inline;
         color: white;
     }
 
-    .containerFull form div{
-        margin-right: 1em;
-        font-size: 2em;
-        display: inline;
-        color: white;
-    }
 
-     form div input[type="radio"]{
+     form ul input[type="radio"]{
         transform: scale(1.5);
         margin: 0 0.5em;
         cursor: pointer;
@@ -234,6 +241,495 @@
     .graphImages{
         width:600px;
         height: 650px;
+    }
+
+}
+
+
+/*TABLET*/
+
+@media only screen and (min-width: 740px) and (max-width: 1199px){
+
+    .errors{
+        margin-top: 1em;
+        margin-bottom: 2em;
+        text-align: center;
+        color: #c80000;
+    }
+
+
+    /*If stock was not selected*/
+    .containerEmpty{
+
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        padding:0;
+        color: white;
+    }
+
+    .containerEmpty section{
+        width:100%;
+    }
+
+    .containerEmpty section:first-of-type{
+
+       background-image: url('./background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0;
+        margin: 0;
+        min-height: 100vh;
+    }
+
+    .containerEmpty section:first-of-type h1{
+        color: white;
+        font-weight: 500;
+        font-size: 3.5em;
+        padding-top:2em;
+        text-align: center;
+        margin-bottom: 0.2em;
+    }
+
+    .containerEmpty section:first-of-type h2{
+        font-weight: 300;
+        text-align: center;
+        
+    }
+
+    .containerEmpty form {
+        margin: 6em auto 0;
+        display: block;
+        width: 90%;
+        align-content: center;
+    }
+
+    .containerEmpty form ul{
+
+        display: flex;
+        justify-content: center;
+    }
+    .containerEmpty form ul li{
+
+        font-size: 2em;
+        display: inline-block;
+        margin: 0 0.5em;
+        color: white;
+
+    }
+
+    .containerEmpty section:first-of-type p{
+        color: white;
+        text-align: center;
+        line-height: 2;
+    }
+
+    .containerEmpty section:first-of-type p:first-of-type{
+        margin-top: 15%;
+    }
+
+    .containerEmpty section:first-of-type p a{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        transition: 1s;
+    }
+
+    .containerEmpty section:first-of-type p a:hover{
+        font-size: 1.1em;
+        transition: 2s;
+    }
+
+    /*If stock was selected*/
+    .containerFull{
+
+        display: block;
+        justify-content: space-between;
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        padding:0 0 2em 0;
+  
+    }
+
+    .containerFull section{
+        width:100%;
+    }
+
+
+    .containerFull section:first-of-type{
+
+        background-image: url('./background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0;
+        margin: 0;
+    }
+
+    .containerFull section:first-of-type h1{
+        color: white;
+        font-weight: 500;
+        font-size: 4em;
+        padding-top: 1em;
+        text-align: center;
+        margin-bottom: 0.2em;
+    }
+
+    .containerFull section:first-of-type h2{
+        font-weight: 300;
+        color: white;
+        text-align: center;
+        margin-bottom: 3em;
+    }
+
+    
+    .containerFull form ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .containerFull form ul li{
+        margin-right: 0.5em;
+        font-size: 2em;
+        display: inline;
+        color: white;
+    }
+
+
+     form ul input[type="radio"]{
+        transform: scale(1.5);
+        margin: 0 0.5em;
+        cursor: pointer;
+    }
+
+    form input[type="submit"]{
+        display: block;
+        margin: 2em auto 0;
+        padding: 0.9em 3em;
+        background-color: #ffffff;
+        color: rgb(71, 64, 64);
+        font-size: 1.2em;
+        border-radius:10px;
+        cursor: pointer;
+        font-weight: 500;
+    }
+     form input[type="submit"]:hover{
+
+        background-color: #6f028a;
+        margin: 2em auto 0;
+        padding: 0.9em 3em;
+        border-radius:10px;
+        color: white;
+    }
+
+    .containerFull section:first-of-type p{
+        color: white;
+        line-height: 2;
+        text-align: center;
+    }
+
+    .containerFull section:first-of-type p:first-of-type{
+        margin-top: 5%;
+    }
+
+    .containerFull section:first-of-type p a{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        transition: 1s;
+    }
+
+    .containerFull section:first-of-type p a:hover{
+        font-size: 1.1em;
+        transition: 2s;
+    }
+
+    .containerFull section p:last-of-type{
+        padding-bottom:2em;
+    }
+
+    /*INITIAL STOCK SECTION*/
+
+
+    /*STOCK SECTION*/
+    .stockData{
+        margin-top: 5em;
+    }
+    .stockData h2{
+        text-align: center;
+        
+    }
+
+    .stockData h4{
+        text-align: center;
+        margin-top: 1em;
+    }
+
+    .todayStock{
+        margin: 2em auto;
+        display: flex;
+        width: 60%;
+        justify-content: space-evenly;
+    }
+
+    .todayStock p{
+        margin: 0 1em 0 0;
+    }
+
+    .graphData{
+        text-align: center;
+    }
+
+    .graphImages{
+        width:600px;
+        height: 650px;
+    }
+
+}
+
+/*PHONE*/
+
+@media only screen  and (max-width: 739px){
+
+    .errors{
+        margin-top: 1em;
+        margin-bottom: 2em;
+        text-align: center;
+        color: #c80000;
+    }
+
+
+    /*If stock was not selected*/
+    .containerEmpty{
+
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        padding:0;
+        color: white;
+    }
+
+    .containerEmpty section{
+        width:100%;
+    }
+
+    .containerEmpty section:first-of-type{
+
+       background-image: url('./background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0;
+        margin: 0;
+        min-height: 100vh;
+    }
+
+    .containerEmpty section:first-of-type h1{
+        color: white;
+        font-weight: 500;
+        font-size: 3em;
+        padding-top:2em;
+        text-align: center;
+        margin-bottom: 0.2em;
+    }
+
+    .containerEmpty section:first-of-type h2{
+        font-weight: 300;
+        font-size: 1em;
+        text-align: center;
+        
+    }
+
+    .containerEmpty form {
+        margin: 3em auto 0;
+        display: block;
+        width: 100%;
+    }
+
+    .containerEmpty form ul{
+
+        display: block;
+        margin: auto;
+        width: 90%;
+        list-style-type: none;
+    }
+    .containerEmpty form ul li{
+
+        font-size: 2em;
+        color: white;
+        margin: auto;
+        text-align: left;
+        display: block;
+        width: 50%;
+        line-height: 2;
+
+    }
+
+    .containerEmpty section:first-of-type p{
+        color: white;
+        text-align: center;
+        line-height: 2;
+    }
+
+    .containerEmpty section:first-of-type p:first-of-type{
+        margin-top: 15%;
+    }
+
+    .containerEmpty section:first-of-type p a{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        transition: 1s;
+    }
+
+    .containerEmpty section:first-of-type p a:hover{
+        font-size: 1.1em;
+        transition: 2s;
+    }
+
+    /*If stock was selected*/
+     .containerFull{
+
+        display: block;
+        justify-content: space-between;
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        padding:0 0 2em 0;
+  
+    }
+
+    .containerFull section{
+        width:100%;
+    }
+
+
+    .containerFull section:first-of-type{
+
+        background-image: url('./background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0;
+        margin: 0;
+    }
+
+    .containerFull section:first-of-type h1{
+        color: white;
+        font-weight: 500;
+        font-size: 2em;
+        padding-top: 0.5em;
+        text-align: center;
+        margin-bottom: 0.2em;
+    }
+
+    .containerFull section:first-of-type h2{
+        font-weight: 300;
+        font-size: 1.1em;
+        color: white;
+        text-align: center;
+        margin-bottom: 3em;
+    }
+
+    
+    .containerFull form ul{
+       
+        display: block;
+        margin: auto;
+        width: 90%;
+        list-style-type: none;
+    }
+
+    .containerFull form ul li{
+        font-size: 2em;
+        color: white;
+        margin: auto;
+        text-align: left;
+        display: block;
+        width: 50%;
+        line-height: 2;
+
+    }
+
+
+     form ul input[type="radio"]{
+        transform: scale(1.5);
+        margin: 0 0.5em;
+        cursor: pointer;
+    }
+
+    form input[type="submit"]{
+        display: block;
+        margin: 2em auto 0;
+        padding: 0.9em 3em;
+        background-color: #ffffff;
+        color: rgb(71, 64, 64);
+        font-size: 1.2em;
+        border-radius:10px;
+        cursor: pointer;
+        font-weight: 500;
+    }
+     form input[type="submit"]:hover{
+
+        background-color: #6f028a;
+        margin: 2em auto 0;
+        padding: 0.9em 3em;
+        border-radius:10px;
+        color: white;
+    }
+
+    .containerFull section:first-of-type p{
+        color: white;
+        line-height: 2;
+        text-align: center;
+    }
+
+    .containerFull section:first-of-type p:first-of-type{
+        margin-top: 5%;
+    }
+
+    .containerFull section:first-of-type p a{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        transition: 1s;
+    }
+
+    .containerFull section:first-of-type p a:hover{
+        font-size: 1.1em;
+        transition: 2s;
+    }
+
+    .containerFull section p:last-of-type{
+        padding-bottom:2em;
+    }
+
+    /*INITIAL STOCK SECTION*/
+
+
+    /*STOCK SECTION*/
+    .stockData{
+        margin-top: 2em;
+    }
+    .stockData h2{
+        text-align: center;
+        
+    }
+
+    .stockData h4{
+        text-align: center;
+        margin-top: 1em;
+    }
+
+    .todayStock{
+        margin: 2em auto;
+        display: flex;
+        width: 95%;
+        justify-content: space-evenly;
+    }
+
+    .todayStock p{
+        margin: 0 1em 0 0;
+    }
+
+    .graphData{
+        text-align: center;
+    }
+
+    .graphImages{
+        width:100%;
+        height: 100%;
     }
 
 }
