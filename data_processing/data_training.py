@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
-
+from analyzer.data_processing.visualize import visualize, create_histogram
 from datetime import date, datetime, timedelta
 
 import requests
@@ -17,6 +17,9 @@ from analyzer.config import API_KEY
 def process_data(companyName):
     # Read and load data from csv to variable
     data = pd.read_csv(f'../data_processing/{companyName}.csv')
+
+    #Create visual Representation
+    visualize(data, companyName)
 
     # Drop empty values
     data = data.dropna()  
@@ -41,6 +44,9 @@ def process_data(companyName):
 
     # Evaluate Results
     mse = mean_squared_error(y_test, y_pred)  
+    
+    # Display test vs predicted value graph
+    create_histogram(X_test, y_test, y_pred)
     
     return model, y_train, y_pred
    
