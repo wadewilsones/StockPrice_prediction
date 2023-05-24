@@ -1,7 +1,7 @@
 # StockPrice_prediction
 AI tool to predict stock price for FAANG companies
 
-To start:
+### To run on localhost:
 
 1. Clone the project to your local machine using CLI
 ```
