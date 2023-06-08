@@ -1,4 +1,4 @@
-# StockPrice_prediction
+# Stock Price prediction application
 AI tool to predict stock price for FAANG companies
 
 ### To run on localhost:
